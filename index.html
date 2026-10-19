@@ -1,81 +1,518 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta name="description"
+    content="Balvant Chaudhary – CSE (Data Science) student at JSS Noida. Passionate about competitive programming, DSA, and full-stack software development. Open to Software Engineering Internships." />
+  <meta name="keywords"
+    content="Balvant Chaudhary, portfolio, software engineer, competitive programming, LeetCode, full-stack developer, JSS Noida" />
+  <meta name="author" content="Balvant Chaudhary" />
+  <meta property="og:title" content="Balvant Chaudhary – Developer Portfolio" />
+  <meta property="og:description"
+    content="CSE student passionate about software engineering, competitive programming, and building practical applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://balvant-12.github.io/my-portfolio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Balvant Chaudhary – Developer Portfolio" />
+  <meta name="twitter:description"
+    content="CSE student passionate about software engineering and competitive programming." />
+  <title>Balvant Chaudhary – Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
 </head>
+
 <body>
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Balvant's Portfolio</h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="themeToggle" aria-label="Toggle dark mode">🌙</button></li>
-      </ul>
-    </nav>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand" aria-label="Go to home section">
+        <span class="brand-highlight">B</span>ALVANT CHAUDHARY<span class="brand-dot">.</span>
+      </a>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#cp" class="nav-link">CP</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <i class="fa-solid fa-moon" id="themeIcon" aria-hidden="true"></i>
+        </button>
+        <a href="#contact" class="btn btn-outline btn-sm">Contact</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false"
+        aria-controls="navLinks">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <img src="profile.jpg" alt="Balvant's profile picture" class="profile-pic" />
-    <h2>Hello, I'm <span>Balvant</span></h2>
-    <p>A passionate Web Developer</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </section>
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I'm a front-end developer who loves to build responsive and interactive websites using HTML, CSS, and JavaScript.
-      I enjoy solving problems and learning new technologies.
-    </p>
-  </section>
+  <main>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-container">
-      <article class="project-card">
-        <img src="project1.jpg" alt="Screenshot of Project 1 website" />
-        <h3>Project 1</h3>
-        <p>A responsive landing page built with HTML, CSS, and JavaScript.</p>
-      </article>
-      <article class="project-card">
-        <img src="project2.jpg" alt="Screenshot of Project 2 web app" />
-        <h3>Project 2</h3>
-        <p>A task manager app with local storage integration.</p>
-      </article>
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="availability-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            Open to Software Engineering Internships
+          </div>
+          <h1 id="hero-heading" class="hero-heading">
+            Building Software.<br />
+            Solving Problems.<br />
+            <span class="gradient-text">Learning Every Day.</span>
+          </h1>
+          <p class="hero-sub">
+            I'm <strong>Balvant Chaudhary</strong>, a Computer Science and Engineering student at JSS Noida, passionate
+            about software engineering, competitive programming, and building practical applications.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
+              View My Projects
+            </a>
+            <a href="assets/Resume.pdf" class="btn btn-outline" download="Balvant_Chaudhary_Resume.pdf"
+              aria-label="Download resume PDF">
+              <i class="fa-solid fa-download" aria-hidden="true"></i>
+              Download Resume
+            </a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/Balvant-12" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="GitHub profile">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/balvant-chaudhary-60aa3132a/?isSelfProfile=true" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="LinkedIn profile">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://leetcode.com/u/Balvant_Chaudhary/" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="LeetCode profile">
+              <i class="fa-solid fa-code" aria-hidden="true"></i>
+              <span>LeetCode</span>
+            </a>
+            <a href="https://codeforces.com/profile/balvantchaudhary" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="Codeforces profile">
+              <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+              <span>Codeforces</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Code panel visual -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="code-panel">
+            <div class="code-panel-header">
+              <div class="code-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="code-filename">portfolio.js</span>
+            </div>
+            <div class="code-body">
+              <pre class="code-block"><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">"Balvant Chaudhary"</span>,
+  <span class="c-prop">role</span>: <span class="c-str">"SDE Aspirant"</span>,
+  <span class="c-prop">university</span>: <span class="c-str">"JSS Noida"</span>,
+  <span class="c-prop">focus</span>: [
+    <span class="c-str">"DSA &amp; Algorithms"</span>,
+    <span class="c-str">"Full-Stack Dev"</span>,
+    <span class="c-str">"Competitive Prog."</span>
+  ],
+  <span class="c-prop">languages</span>: [<span class="c-str">"Java"</span>, <span class="c-str">"JS"</span>],
+  <span class="c-fn">solve</span>: <span class="c-keyword">function</span>() {
+    <span class="c-keyword">return</span> <span class="c-str">"Let's build!"</span>;
+  }
+};</code></pre>
+            </div>
+          </div>
+          <div class="hero-stat-chips">
+            <div class="stat-chip">
+              <span class="stat-num">750+</span>
+              <span class="stat-label">LC Problems</span>
+            </div>
+            <div class="stat-chip">
+              <span class="stat-num">1797</span>
+              <span class="stat-label">LC Rating</span>
+            </div>
+            <div class="stat-chip">
+              <span class="stat-num">8.1</span>
+              <span class="stat-label">CGPA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Who I Am</span>
+          <h2 class="section-title" id="about-heading">About Me</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm a second-year B.Tech student specialising in Computer Science and Engineering (Data Science) at JSS
+              Academy of Technical Education, Noida. My academic journey is driven by genuine curiosity for how software
+              systems are designed, built and optimised.</p>
+            <p>I spend a significant portion of my time solving algorithmic problems on platforms like LeetCode,
+              CodeChef and Codeforces. Competitive programming sharpens my logical reasoning and teaches me to think
+              clearly under constraints — skills I carry directly into software development.</p>
+            <p>On the development side, I built <strong>MediKiosk</strong> — a full-stack medical interview platform
+              that handles patient screening, OCR-based document extraction, AI-assisted question selection and a
+              doctor-facing dashboard. It's the kind of project where each layer taught me something new.</p>
+            <p>I learn best by building things, breaking them and understanding why they broke. My goal is to become a
+              strong software engineer — one who writes clean, maintainable code and can navigate both algorithmic
+              problems and real-world engineering challenges.</p>
+          </div>
+          <div class="about-highlights reveal">
+            <div class="highlight-card">
+              <div class="highlight-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></div>
+              <div>
+                <h3>Problem Solver</h3>
+                <p>1550+ problems across LeetCode, CodeChef and Codeforces. 130+ contests entered.</p>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+              <div>
+                <h3>Full-Stack Builder</h3>
+                <p>Built MediKiosk — a full-stack app using React, Node.js, MongoDB and AI tooling.</p>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+              <div>
+                <h3>CSE (Data Science)</h3>
+                <p>B.Tech at JSS Noida · CGPA 8.1/10 · Graduating 2028.</p>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+              <div>
+                <h3>Competitive Achiever</h3>
+                <p>Ranked 14th at IIIT Allahabad's CodeRed. National finalist at IIT Roorkee's Insomnia 26.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What I Know</span>
+          <h2 class="section-title" id="skills-heading">Technical Skills</h2>
+        </div>
+        <div class="skills-grid reveal">
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-file-code" aria-hidden="true"></i>
+              <h3>Languages</h3>
+            </div>
+            <ul class="skill-tags">
+              <li class="skill-tag"><i class="fa-brands fa-java" aria-hidden="true"></i> Java</li>
+              <li class="skill-tag"><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-desktop" aria-hidden="true"></i>
+              <h3>Frontend</h3>
+            </div>
+            <ul class="skill-tags">
+              <li class="skill-tag"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</li>
+              <li class="skill-tag"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3</li>
+              <li class="skill-tag"><i class="fa-brands fa-react" aria-hidden="true"></i> React</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-server" aria-hidden="true"></i>
+              <h3>Backend</h3>
+            </div>
+            <ul class="skill-tags">
+              <li class="skill-tag"><i class="fa-brands fa-node-js" aria-hidden="true"></i> Node.js</li>
+              <li class="skill-tag"><i class="fa-solid fa-route" aria-hidden="true"></i> Express.js</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-database" aria-hidden="true"></i>
+              <h3>Database</h3>
+            </div>
+            <ul class="skill-tags">
+              <li class="skill-tag"><i class="fa-solid fa-leaf" aria-hidden="true"></i> MongoDB</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+              <h3>CS Fundamentals</h3>
+            </div>
+            <ul class="skill-tags">
+              <li class="skill-tag">DSA</li>
+              <li class="skill-tag">OOP</li>
+              <li class="skill-tag">DBMS</li>
+              <li class="skill-tag">Operating Systems</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+              <h3>Tools</h3>
+            </div>
+            <ul class="skill-tags">
+              <li class="skill-tag"><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</li>
+              <li class="skill-tag"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</li>
+              <li class="skill-tag"><i class="fa-solid fa-code" aria-hidden="true"></i> VS Code</li>
+              <li class="skill-tag"><i class="fa-solid fa-cube" aria-hidden="true"></i> IntelliJ IDEA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What I've Built</span>
+          <h2 class="section-title" id="projects-heading">Featured Projects</h2>
+        </div>
+        <div class="projects-list" id="projectsList"></div>
+        <p class="projects-note reveal">More projects coming soon — I'm always building something new.</p>
+      </div>
+    </section>
+
+    <!-- COMPETITIVE PROGRAMMING -->
+    <section class="section cp-section" id="cp" aria-labelledby="cp-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Algorithmic Depth</span>
+          <h2 class="section-title" id="cp-heading">Competitive Programming</h2>
+          <p class="section-desc">A core part of how I think and learn. Statistics are taken from my resume and stored
+            in one editable location in <code>script.js</code>.</p>
+        </div>
+        <div class="cp-grid" id="cpGrid"></div>
+        <p class="cp-disclaimer reveal">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          Statistics are manually recorded from my profiles and may not reflect the most current values.
+        </p>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="section achievements-section" id="achievements" aria-labelledby="achievements-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Milestones</span>
+          <h2 class="section-title" id="achievements-heading">Achievements</h2>
+        </div>
+        <div class="achievements-grid" id="achievementsGrid"></div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section education-section" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Academic Background</span>
+          <h2 class="section-title" id="education-heading">Education</h2>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-card-left">
+            <div class="edu-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+          </div>
+          <div class="edu-card-right">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">B.Tech – Computer Science &amp; Engineering (Data Science)</h3>
+                <p class="edu-institution">JSS Academy of Technical Education, Noida</p>
+              </div>
+              <div class="edu-meta">
+                <span class="edu-duration">2024 – 2028</span>
+                <span class="edu-cgpa">CGPA: <strong>8.1 / 10</strong></span>
+              </div>
+            </div>
+            <ul class="edu-highlights">
+              <li>Data Structures &amp; Algorithms</li>
+              <li>Object-Oriented Programming</li>
+              <li>Database Management Systems</li>
+              <li>Operating Systems</li>
+              <li>Software Engineering</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="section roadmap-section" id="roadmap" aria-labelledby="roadmap-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Looking Ahead</span>
+          <h2 class="section-title" id="roadmap-heading">What I'm Working Towards</h2>
+          <p class="section-desc">My learning roadmap — goals I'm actively working on, not completed qualifications.</p>
+        </div>
+        <div class="roadmap-list reveal">
+          <div class="roadmap-item">
+            <div class="roadmap-dot" aria-hidden="true">1</div>
+            <div class="roadmap-content">
+              <h3>Deepen DSA &amp; Competitive Programming</h3>
+              <p>Continue strengthening algorithmic skills and contest performance in Java.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-dot" aria-hidden="true">2</div>
+            <div class="roadmap-content">
+              <h3>JavaScript Fundamentals &amp; Frontend Projects</h3>
+              <p>Build strong JavaScript foundations and create polished, practical frontend work.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-dot" aria-hidden="true">3</div>
+            <div class="roadmap-content">
+              <h3>React &amp; Component-Based UI</h3>
+              <p>Learn React patterns and build component-driven user interfaces.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-dot" aria-hidden="true">4</div>
+            <div class="roadmap-content">
+              <h3>Backend, APIs &amp; Full-Stack Integration</h3>
+              <p>Strengthen Node.js, Express, MongoDB, authentication and REST API design.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-dot" aria-hidden="true">5</div>
+            <div class="roadmap-content">
+              <h3>Project Quality, Deployment &amp; Testing</h3>
+              <p>Improve code quality, add testing, deploy projects and prepare for interviews.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-dot" aria-hidden="true">6</div>
+            <div class="roadmap-content">
+              <h3>Generative AI &amp; Agentic Systems</h3>
+              <p>Explore RAG, LLMs and agentic AI after building a solid engineering foundation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-inner reveal">
+          <div class="section-header">
+            <span class="section-label">Get In Touch</span>
+            <h2 class="section-title" id="contact-heading">Let's Connect</h2>
+            <p class="section-desc contact-msg">Have an opportunity, project idea, or interesting problem to discuss?
+              I'd love to hear from you.</p>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-links-col">
+              <a href="mailto:chaudharybalvant2005@gmail.com" class="contact-card" aria-label="Send email">
+                <div class="contact-card-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+                <div class="contact-card-body">
+                  <span class="contact-card-label">Email</span>
+                  <span class="contact-card-value">chaudharybalvant2005@gmail.com</span>
+                </div>
+                <i class="fa-solid fa-arrow-right contact-card-arrow" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/balvant-chaudhary-60aa3132a/?isSelfProfile=true" target="_blank" rel="noopener noreferrer"
+                class="contact-card" aria-label="LinkedIn profile">
+                <div class="contact-card-icon"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></div>
+                <div class="contact-card-body">
+                  <span class="contact-card-label">LinkedIn</span>
+                  <span class="contact-card-value">Connect with me</span>
+                </div>
+                <i class="fa-solid fa-arrow-right contact-card-arrow" aria-hidden="true"></i>
+              </a>
+              <a href="https://github.com/Balvant-12" target="_blank" rel="noopener noreferrer" class="contact-card"
+                aria-label="GitHub profile">
+                <div class="contact-card-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></div>
+                <div class="contact-card-body">
+                  <span class="contact-card-label">GitHub</span>
+                  <span class="contact-card-value">See my code</span>
+                </div>
+                <i class="fa-solid fa-arrow-right contact-card-arrow" aria-hidden="true"></i>
+              </a>
+              <a href="assets/Resume.pdf" class="contact-card" download="Balvant_Chaudhary_Resume.pdf"
+                aria-label="Download resume">
+                <div class="contact-card-icon"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></div>
+                <div class="contact-card-body">
+                  <span class="contact-card-label">Resume</span>
+                  <span class="contact-card-value">Download PDF</span>
+                </div>
+                <i class="fa-solid fa-download contact-card-arrow" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="contact-note-col">
+              <div class="contact-note">
+                <p>The quickest way to reach me is via email or LinkedIn. I'm actively looking for Software Engineering
+                  internship opportunities and am open to interesting project collaborations.</p>
+                <a href="mailto:chaudharybalvant2005@gmail.com" class="btn btn-primary">
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                  Send Me an Email
+                </a>
+                <p class="mailto-note">This opens your default mail client. No messages are stored on this site.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-brand">Balvant Chaudhary</p>
+      <p class="footer-copy"><span id="footerYear"></span> · Built with HTML, CSS &amp; JavaScript</p>
+      <div class="footer-links">
+        <a href="https://github.com/Balvant-12" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+            class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/balvant-chaudhary-60aa3132a/?isSelfProfile=true" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="mailto:chaudharybalvant2005@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"
+            aria-hidden="true"></i></a>
+      </div>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <label for="name">Name:</label>
-      <input id="name" type="text" placeholder="Enter your name" required />
-
-      <label for="email">Email:</label>
-      <input id="email" type="email" placeholder="Enter your email" required />
-
-      <label for="message">Message:</label>
-      <textarea id="message" placeholder="Write your message..." required></textarea>
-
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Balvant Chaudhary. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
