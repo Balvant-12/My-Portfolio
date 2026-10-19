@@ -417,6 +417,7 @@ h4 {
   background: rgba(0, 0, 0, 0.5);
   z-index: 998;
   opacity: 0;
+  pointer-events: none;
   transition: opacity var(--tr);
 }
 
@@ -614,23 +615,23 @@ h4 {
 }
 
 .c-keyword {
-  color: hsl(300, 60%, 70%);
+  color: hsl(300, 86%, 50%);
 }
 
 .c-var {
-  color: hsl(210, 80%, 75%);
+  color: hsl(210, 80%, 47%);
 }
 
 .c-prop {
-  color: hsl(200, 70%, 65%);
+  color: hsl(200, 81%, 47%);
 }
 
 .c-str {
-  color: hsl(100, 55%, 65%);
+  color: hsl(100, 71%, 42%);
 }
 
 .c-fn {
-  color: hsl(45, 90%, 68%);
+  color: hsl(45, 81%, 48%);
 }
 
 /* Hero stat chips */
@@ -1698,6 +1699,7 @@ h4 {
 
   .nav-overlay.visible {
     opacity: 1;
+    pointer-events: auto;
   }
 
   .nav-actions .btn-sm {
